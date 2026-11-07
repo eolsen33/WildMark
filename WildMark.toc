@@ -1,0 +1,14 @@
+## Interface: 16001
+## Title: WildMark
+## Notes: Finds nearby allies without Mark of the Wild and arms one button (or key) that buffs them, one after another.
+## Author: Eric Olsen
+## Version: 0.1.0
+## SavedVariables: WildMarkDB
+## IconTexture: Interface\Icons\Spell_Nature_Regeneration
+## Category: Buffs
+## X-Website: https://github.com/eolsen33/WildMark
+
+Core.lua
+Scan.lua
+Button.lua
+Bindings.xml

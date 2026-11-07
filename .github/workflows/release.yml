@@ -1,0 +1,28 @@
+name: Release
+
+# Tag a commit (v1.0.1) and push the tag: the packager zips the addon, reads
+# the TOC for the version and game flavor, and uploads it to CurseForge.
+# Needs the CF_API_KEY repo secret and the X-Curse-Project-ID line in the TOC.
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Package and upload
+        uses: BigWigsMods/packager@v2
+        env:
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}
+          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,4 @@
+<Bindings>
+	<Binding name="CLICK WildMarkButton:LeftButton" header="WILDMARK" category="ADDONS" />
+	<Binding name="WILDMARK_SKIP" category="ADDONS">WildMark_Skip()</Binding>
+</Bindings>

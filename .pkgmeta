@@ -1,0 +1,7 @@
+package-as: WildMark
+
+ignore:
+  - README.md
+  - .github
+  - .pkgmeta
+  - .gitignore
